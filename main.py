@@ -16,6 +16,6 @@ def getCharAmount():
     return chars
 
 charAmount = getCharAmount()
-containUpperCase = getInfo("uppercase")
-containNumbers = getInfo("numbers")
+containUpperCase = getInfo("upper case")
+containNumbers = getInfo("number")
 containSpecial = getInfo("special")

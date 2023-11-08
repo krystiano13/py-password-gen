@@ -1,13 +1,5 @@
 def getInfo(dataType):
-    inputText = ""
-    match dataType:
-        case "numbers":
-            inputText = "Should your password contain number characters ? [true/false]"
-        case "uppercase":
-            inputText = "Should your password contain upperCase characters ? [true/false]"
-        case "special":
-            inputText = "Should your password contain special characters ? [true/false]"
-
+    inputText = "Should your password contain {0} characters ? [true/false]".format(dataType)
     value = input(inputText)
     if value == "true":
         return True
