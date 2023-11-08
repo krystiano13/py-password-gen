@@ -1,4 +1,18 @@
 charAmount = 0
+containUpperCase = False
+containNumbers = False
+containSpecial = False
+
+def askUpperCase():
+    upper = input("Should your password contain upperCase characters ? [true/false]")
+
+    if upper == "true":
+        return True
+    elif upper == "false":
+        return False
+    else:
+        print("Wrong answer provided")
+        return askUpperCase()
 
 def getCharAmount():
     print("How many characters your password should have ? \n")
@@ -11,4 +25,4 @@ def getCharAmount():
     return chars
 
 charAmount = getCharAmount()
-print(charAmount)
+containUpperCase = askUpperCase()
