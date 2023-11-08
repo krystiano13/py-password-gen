@@ -20,7 +20,8 @@ charAmount = getCharAmount()
 containUpperCase = getInfo("upper case")
 containNumbers = getInfo("number")
 containSpecial = getInfo("special")
+result = ""
 
 for i in range(charAmount):
-    print(randChar(containUpperCase, containNumbers, containSpecial))
-
+    result += randChar(containUpperCase, containNumbers, containSpecial)
+print(result)

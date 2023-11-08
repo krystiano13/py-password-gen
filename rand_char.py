@@ -17,7 +17,7 @@ def randChar(upper, num, special):
                 return randChar(upper, num, special)
             else:
                 char = randint(0, 9)
-                return char
+                return str(char)
         case 3:
             if not special:
                 return randChar(upper, num, special)
