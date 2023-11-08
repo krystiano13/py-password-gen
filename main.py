@@ -1,4 +1,4 @@
-from info import askNumbers, askSpecial, askUpperCase
+from info import getInfo
 
 charAmount = 0
 containUpperCase = False
@@ -16,6 +16,6 @@ def getCharAmount():
     return chars
 
 charAmount = getCharAmount()
-containUpperCase = askUpperCase()
-containNumbers = askNumbers()
-containSpecial = askSpecial()
+containUpperCase = getInfo("uppercase")
+containNumbers = getInfo("numbers")
+containSpecial = getInfo("special")

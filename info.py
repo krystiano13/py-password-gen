@@ -1,30 +1,18 @@
-def askSpecial():
-    spec = input("Should your password contain special characters ? [true/false]")
-    if spec == "true":
+def getInfo(dataType):
+    inputText = ""
+    match dataType:
+        case "numbers":
+            inputText = "Should your password contain number characters ? [true/false]"
+        case "uppercase":
+            inputText = "Should your password contain upperCase characters ? [true/false]"
+        case "special":
+            inputText = "Should your password contain special characters ? [true/false]"
+
+    value = input(inputText)
+    if value == "true":
         return True
-    elif spec == "false":
+    elif value == "false":
         return False
     else:
         print("Wrong answer provided")
-        return askSpecial()
-
-def askNumbers():
-    num = input("Should your password contain number characters ? [true/false]")
-    if num == "true":
-        return True
-    elif num == "false":
-        return False
-    else:
-        print("Wrong answer provided")
-        return askNumbers()
-
-def askUpperCase():
-    upper = input("Should your password contain upperCase characters ? [true/false]")
-
-    if upper == "true":
-        return True
-    elif upper == "false":
-        return False
-    else:
-        print("Wrong answer provided")
-        return askUpperCase()
+        return getInfo(dataType)
