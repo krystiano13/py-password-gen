@@ -1,4 +1,5 @@
 from info import getInfo
+from rand_char import randChar
 
 charAmount = 0
 containUpperCase = False
@@ -13,9 +14,13 @@ def getCharAmount():
     except ValueError:
         print("Value is not an integer number")
         return getCharAmount()
-    return chars
+    return int(chars)
 
 charAmount = getCharAmount()
 containUpperCase = getInfo("upper case")
 containNumbers = getInfo("number")
 containSpecial = getInfo("special")
+
+for i in range(charAmount):
+    print(randChar(containUpperCase, containNumbers, containSpecial))
+
